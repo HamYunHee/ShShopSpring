@@ -1,0 +1,820 @@
+@charset "utf-8";
+
+ol, ul, dl, li, dt, dd {
+  list-style: none;
+}
+
+dl {
+  display: block;
+}
+
+dt {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: bold;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+fieldset, img {
+  border: 0 none;
+}
+
+img {
+  vertical-align: top;
+}
+
+ul, menu, dir {
+  display: block;
+}
+
+textarea {
+  font-size: 13px!important;
+  letter-spacing: 0!important;
+  line-height: 14px;
+  color: #333;
+  padding: 3px;
+  border: solid 1px #cbcbcb;
+  resize: none;
+  overflow: hidden;
+}
+
+h4 {
+	visibility: hidden;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+}
+
+p {
+  display: block;
+}
+
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+a.btnShop {
+  display: inline-block;
+  background-position: 0 -631px;
+  width: 103px;
+  line-height: 21px;
+  font-size: 13px;
+  letter-spacing: -1px;
+  color: #666;
+  padding: 0 0 0 7px;
+}
+
+.price {
+  color: #f46200!important;
+}
+
+.name, .name a {
+  color: #209cd4!important;
+}
+
+#wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-width: 1000px;
+}
+
+#section {
+  width: 100%;
+  padding: 0 0 40px 0;
+}
+
+#section #contents {
+  width: 1000px;
+  margin: 0 auto;
+  min-height: 350px;
+  _height: 350px;
+}
+
+div.viewTopArea {
+  width: 100%;
+  height: 33px;
+}
+
+div.viewTopArea div.leftArea {
+  float: left;
+}
+
+div.viewTopArea div.rightArea {
+  float: right;
+}
+
+div.viewTopArea div.leftArea a.btn_gray2 {
+  float: left;
+  width: 65px;
+  text-align: center;
+}
+
+
+div.viewTopArea div.rightArea span.date {
+  display: inline-block;
+  color: #999;
+  padding: 8px 0 0 0;
+}
+
+div.page_navi {
+  margin: 15px 0 0 0;
+  height: 30px;
+}
+
+div.page_navi div.location {
+  float: left;
+  background-position: 0 0;
+  padding: 0 0 0 17px;
+  color: #666;
+  line-height: 12px;
+}
+
+div.page_navi div.location a {
+  color: #666;
+}
+
+div.page_navi div.location span {
+  color: #a6a6a6;
+}
+
+div.detailView {
+  position: relative;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+div.detailView div.detailBox {
+  overflow: hidden;
+  width: 998px;
+  min-height: 100px;
+  border-top: solid 1px #d5d5d5;
+  border-left: solid 1px #d5d5d5;
+  border-right: solid 1px #d5d5d5;
+}
+
+div.photoArea {
+  float: left;
+  position: relative;
+  overflow: hidden;
+  padding: 20px 35px;
+}
+
+div.photoArea div.bigPhoto img {
+  width: 425px;
+  height: 425px;
+  border: solid 1px #666;
+}
+
+div.photoArea div.text {
+  position: absolute;
+  z-index: 10;
+  top: 420px;
+  left: 35px;
+  width: 426px;
+  height: 20px;
+  padding: 7px 0 0 0;
+  text-align: center;
+  background-color: #000;
+  filter: Alpha(opacity=50);
+  opacity: .5;
+  color: #FFF;
+}
+
+div.photoArea div.photoMap {
+  border: solid 1px #e6930e;
+  width: 425px;
+  height: 425px;
+}
+
+div.photoArea div.photoMap ul {
+  width: 425px;
+  height: 24px;
+}
+
+div.photoArea div.photoMap ul li {
+  float: left;
+  width: 212px;
+  font-weight: bold;
+  line-height: 24px;
+  text-align: center;
+}
+
+div.photoArea div.photoMap ul li.on {
+  width: 213px;
+  background-color: #eb790a;
+}
+
+div.photoArea div.photoMap ul li a {
+  color: #eb790a;
+}
+
+div.photoArea div.photoMap ul li.on a {
+  color: #FFF;
+}
+
+div.photoArea ul.miniPhoto {
+  padding: 10px 0 0 0;
+}
+
+div.photoArea ul.miniPhoto li {
+  float: left;
+  padding: 0 3px 0 0;
+  cursor: pointer;
+}
+
+div.photoArea ul.miniPhoto li img {
+  width: 36px;
+  height: 36px;
+  border: solid 1px #c6c6c6;
+  padding: 1px;
+}
+
+div.photoArea ul.miniPhoto li img:hover, div.photoArea ul.miniPhoto li img.on {
+  border: solid 2px #219cd4;
+  padding: 0;
+}
+
+div.photoArea ul.miniPhoto li img {
+  width: 36px;
+  height: 36px;
+  border: solid 1px #c6c6c6;
+  padding: 1px;
+}
+
+div.detailArea {
+  float: left;
+  position: relative;
+  width: 450px;
+  border-left: solid 1px #d5d5d5;
+  padding: 20px 0 20px 36px;
+}
+
+div.detailArea div.functionBtn {
+  clear: both;
+  position: relative;
+  width: 430px;
+  height: 18px;
+  padding: 32px 0 15px 0;
+}
+
+div.detailArea div.functionBtn ul {
+  float: left;
+}
+
+div.detailArea div.functionBtn ul li {
+  float: left;
+}
+
+div.detailArea div.detailInfo {
+  width: 425px;
+  min-height: 200px;
+  height: 200px;
+  overflow: hidden;
+  margin: 0 0 10px 0;
+}
+
+div.detailArea div.title {
+  width: 425px;
+  padding: 0 25px 15px 0;
+  float: left;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  line-height: 22px;
+}
+
+div.detailArea div.title img {
+  margin: 1px 3px 0 0;
+}
+
+div.detailArea div.info {
+  width: 430px;
+  overflow: hidden;
+}
+
+div.detailArea div.info dl {
+  width: 430px;
+  color: #222;
+  line-height: 16px;
+  overflow: hidden;
+}
+
+div.detailArea div.info dl dt {
+  float: left;
+  width: 110px;
+  padding: 4px 0 4px 7px;
+  background-position: left -298px;
+}
+
+div.detailArea div.info dl dd {
+  float: left;
+  width: 312px;
+  padding: 4px 0 4px 0;
+}
+
+div.detailArea div.info dl dd img {
+  vertical-align: middle;
+  margin: 0 5px 0 0;
+}
+
+div.detailArea div.info dl dd span.price img {
+  margin: -2px 0 0 5px;
+}
+
+div.detailArea div.userBox {
+  width: 398px;
+  overflow: hidden;
+  border: solid 1px #d9d9d9;
+  padding: 5px 15px;
+}
+
+div.detailArea div.userBox div.userInfo {
+  overflow: hidden;
+}
+
+div.detailArea div.userBox div.userInfo div.userName {
+  float: left;
+  width: 280px;
+}
+
+div.detailArea div.userBox div.userInfo div.userName p.name {
+  float: left;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+div.detailArea div.userBox div.userList {
+  width: 390px;
+  padding: 10px 0 0 0;
+}
+
+div.detailArea div.userBox div.userList div.snsNo {
+  margin: 6px 0 0 0;
+}
+
+div.detailArea div.userBox div.userList div.snsNo img {
+  width: 70px!important;
+  height: 70px!important;
+  border: solid 1px #666;
+}
+
+div.detailArea div.userBox div.userList div.userPhoto {
+  float: left;
+}
+
+div.detailArea div.userBox div.userList div.userPhoto p img {
+  width: 62px;
+  height: 62px;
+  border: solid 1px #666;
+}
+
+div.detailArea div.userBox div.userList ul.userArticle {
+  float: left;
+  margin: 2px 0 4px 10px;
+}
+
+div.detailArea div.userBox div.userList ul.userArticle li {
+  background-position: left -233px;
+  padding: 0 0 0 7px;
+  line-height: 21px;
+  font-size: 13px;
+  color: #666;
+  letter-spacing: -1px;
+}
+
+div.detailCnt {
+  overflow: hidden;
+}
+
+div.detailCnt div.detailCntL {
+  float: left;
+  width: 600px;
+}
+
+.h3_icon {
+  text-indent: 0; 
+  background-image: url('../image/sqpurple.gif');
+  background-repeat: no-repeat;
+  background-position: -1px;
+  padding: 0 0 0 10px;
+  color: #000;
+  margin: 0 0 7px 0;
+}
+
+div.detailCnt div.cntView {
+  clear: left;
+  line-height: 16px;
+  padding: 0 0 30px 0;
+}
+
+div.detailCnt div.cmtView {
+  clear: left;
+}
+
+div.cmtView div.cmtAll {
+  clear: both;
+  background-color: #e2f0f9;
+  padding: 8px 8px 0 8px;
+  border: solid 1px #c1d7e6;
+  height: 20px;
+}
+
+div.cmtView div.cmtAll span {
+  float: right;
+}
+
+
+div {
+  display: block;
+}
+
+div.openBox {
+  clear: both;
+  position: relative;
+  width: 428px;
+  border: solid 1px #cbcbcb;
+  margin: 10px 0;
+}
+
+div.cmtWrite {
+  clear: both;
+  overflow: hidden;
+  background-color: #e2f0f9;
+  border: solid 1px #c1d7e6;
+  padding: 5px;
+  font-size: 13px;
+  color: #666;
+  letter-spacing: -1px;
+  margin: 5px 0 0 0;
+}
+
+div.cmtWrite textarea {
+  border: solid 1px #d9d9d9;
+}
+
+/*--accordion--*/
+
+.accordion {
+    overflow: hidden;
+    width: 1000px; 
+}
+
+.accordion li {
+    list-style-type: none;
+    width: 1000px;
+}
+
+.accordion-control {
+    color: #fff;
+    display: block;
+    width: 100%;
+    height: 30px;
+    font-weight: bold;
+    background: rgb(59,103,158); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(59,103,158,1) 0%, rgba(43,136,217,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(59,103,158,1)), color-stop(50%,rgba(43,136,217,1)), color-stop(51%,rgba(32,124,202,1)), color-stop(100%,rgba(125,185,232,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(59,103,158,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(59,103,158,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(59,103,158,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(59,103,158,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b679e', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+}
+.accordion-panel {
+    min-height: 300px;
+    margin: 5px;
+    padding: 5px;
+}
+.accordion-panel img {
+    display: block;
+    clear: left;
+}
+
+
+ 
+/* ----------------유사상품 보기--------------- */
+
+div.h3_title div.h3_titleIn {
+	position: absolute;
+	top: -23px;
+	width: 100%;
+}
+
+div.h3_title {
+	position: relative;
+	margin: 45px 0 0 0;
+}
+
+div.h3_title, div.h3_title_lineBig {
+	width: 100%;
+	height: 1px;
+	border: solid 1px #3796c2;
+	background-color: #4fbaeb;
+}
+
+div.h3_title h3.similar {
+	width: 180px;
+	background-position: 0 -480px;
+}
+
+div.graybox {
+	clear: both;
+	position: relative;
+	overflow: hidden;
+	width: 998px;
+}
+
+div.graybox div.horizontal_box {
+	position: relative;
+	overflow: hidden;
+	width: 948px;
+	margin: 0 0 0 27px;
+}
+
+div.graybox div.itembox {
+	position: relative;
+	display: inline-block;
+}
+
+div.graybox div.itembox ul {
+	float: left;
+	width: 945px;
+	padding: 20px 0 0 0;
+}
+
+div.graybox div.itembox li {
+	position: relative;
+	float: left;
+	display: inline; 
+	width: 110px;
+	height: 162px;
+	text-align: center;
+	padding: 0 0 11px 0;
+	margin: 4px;
+}
+
+div.graybox div.itembox li p {
+	float: left;
+	background: url(../image/bg_itembox.gif) no-repeat;
+	background-size:cover;
+	padding: 12px 12px 0 12px;
+	width: 86px;
+	border-style: solid;
+    border-width: 1px;
+}
+
+div.graybox div.itembox li p a {
+	color: #333;
+	text-decoration: none;
+	cursor: pointer;
+	width: 86px;
+	height:86px;
+}
+
+div.graybox div.itembox li p strong {
+	display: block;
+	padding: 7px 0 0 0;
+	font-size: 13px;
+	letter-spacing: -1px;
+	font-weight: normal;
+}
+
+div.graybox div.itembox li p span.price {
+	padding: 3px 0 0 0;
+	font-size: 13px;
+}
+
+div.graybox div.itembox li p span.time {
+	font-size: 13px;
+	padding: 4px 0 0 0;
+}
+
+p.moveBtn {
+	width: 90px;
+	height: 27px;
+	margin: 0 auto;
+	padding: 3px 0 0 0;
+}
+
+a.movepreB {
+	float: left;
+	background-position: -78px 0;
+	width: 22px;
+	height: 22px;
+	text-indent: -1000em;
+  	overflow: hidden;
+  	display: inline-block;
+  	background: url(../image/all_btn_20130923.png) no-repeat;
+}
+
+a.movenextB {
+  	text-indent: -1000em;
+  	overflow: hidden;
+  	display: inline-block;
+  	background: url(../image/all_btn_20130923.png) no-repeat;
+}
+
+p.moveBtn span {
+	float: left;
+	width: 45px;
+	color: #999;
+	letter-spacing: 2px;
+	text-align: center;
+	padding: 4px 0 0 0;
+}
+
+p.moveBtn span strong {
+	color: #333;
+}
+
+a.movepreB {
+	float: left;
+	background-position: -78px 0;
+	width: 22px;
+	height: 22px;
+}
+
+a.movenextB {
+	float: left;
+	background-position: -103px 0;
+	width: 22px;
+	height: 22px;
+}
+
+
+/*-- 댓글 달기 --*/
+.clearfix:before, .clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+div.detailCnt div.cmtView{
+  clear: left;
+}
+
+div.cmtView dl {
+  float: left;
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 7px 0 7px 0;
+}
+
+div.cmtView dl dt {
+  float: left;
+  margin: 0 10px 0 5px;
+}
+
+div.cmtView dl dt img {
+  width: 32px;
+  height: 32px;
+}
+
+div.cmtView dl dd {
+  float: left;
+  position: relative;
+  width: 545px;
+}
+
+div.cmtView dl dd p.name {
+  font-weight: bold;
+  padding: 1px 0 3px 0;
+}
+
+div.cmtView dl dd p.text {
+  color: #666;
+  width: 91%;
+  line-height: 16px;
+}
+
+div.cmtcmt {
+  position: relative;
+  overflow: hidden;
+  padding: 0 0 0 25px;
+  margin: 3px 0 0 -25px;
+  width: 552px;
+}
+
+div.cmtView2 {
+  clear: both;
+}
+
+p.flagBtn a, .cmtReplyTitle, .fileImage {
+  text-indent: -1000em;
+  overflow: hidden;
+  display: inline-block;
+  background: url('../image/all_icon.png') no-repeat;
+}
+
+p.cmtReplyTitle {
+  float: left;
+  background-position: -14px -63px;
+  width: 12px;
+  height: 19px;
+  margin: 13px 0 0 -17px;
+}
+
+div.cmtView2 dl dt {
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+p.functionCmt {
+  clear: both;
+  font-size: 13px;
+  letter-spacing: -1px;
+  padding: 5px 0 0 0;
+}
+
+a.cmtReply {
+  color: #d1af4d;
+  padding: 0 0 0 21px;
+  margin: 0 15px 0 0;
+}
+
+dl.first {
+  border-top: solid 0 #c1d7e6;
+}
+
+dl.gray {
+  background-color: #f2f2f2;
+}
+
+.time {
+  color: #999!important;
+  display: inline-block;
+  padding: 0 0 0 3px;
+}
+
+/*-------------- 거래설명 --------------------------*/
+div.detailCnt div.detailCntR {
+  float: right;
+  width: 320px;
+}
+
+div.detailCnt div.detailCntR div.tipBoxWrap {
+  width: 320px;
+  margin: 0 0 10px 0;
+}
+
+div.detailCnt div.detailCntR div.tipBoxWrap div.tipT {
+  height: 10px;
+  background: url(../image/box_tip.gif) top no-repeat;
+}
+
+div.detailCnt div.detailCntR div.tipBoxWrap div.tipPrivate {
+  width: 284px;
+  height: 30px;
+  background: url(../image/box_tip_private.gif) top no-repeat;
+  color: #6f6528;
+  font-weight: bold;
+  padding: 3px 0 0 36px;
+}
+
+div.detailCnt div.detailCntR div.tipBoxWrap div.tipBox {
+  color: #8f845f;
+  font-size: 12px;
+  letter-spacing: -1px;
+  padding: 2px 10px;
+  line-height: 16px;
+  background-color: #fbf5d0;
+  border-left: solid 1px #d2c494;
+  border-right: solid 1px #d2c494;
+}
+
+div.detailCnt div.detailCntR div.tipBoxWrap div.tipBox div.tipCnt p.textgreen {
+  color: #138d17;
+}
+
+div.detailCnt div.detailCntR div.tipBoxWrap div.tipBox div.tipCnt dl {
+  padding: 10px 0 0 0;
+}
+
+div.detailCnt div.detailCntR div.tipBoxWrap div.tipBox div.tipCnt dl dt {
+  font-weight: bold;
+  padding: 0 0 2px 0;
+  color: #786c42;
+}
+
+div.detailCnt div.detailCntR div.tipBoxWrap div.tipBox div.tipCnt ul li {
+  padding: 1px 0 0 0;
+}
+
+div.detailCnt div.detailCntR div.tipBoxWrap div.tipB {
+  height: 10px;
+  background: url(../image/box_tip2.gif) bottom no-repeat;
+} 
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>중고거래사이트</title>
+	<link rel="stylesheet" href="content/css/command.css">
+</head>
+<body>
+	<div class="wrap">
+		<div id="bootlogo">
+			<img src="content/image/default/In_logo.png">
+		</div>
+		<div id="bootsearch">
+			<select>
+				<option>통합검색</option>
+				<option>의류</option>
+				<option>장난감</option>
+				<option>가전</option>
+				<option>악세서리</option>
+			</select>
+			<form id="searchForm" name="searchForm" method="post" action="action/search">
+				<input type="text"> 
+				<input type="submit" value="Search" >
+			</form>
+		</div>
+		<form id="viewMainForm" name="viewMainForm" method="post" action="action/viewMain">
+			<input type="submit" value="메인 바로가기">
+		</form>
+	</div>
+</body>
+
+</html>

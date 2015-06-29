@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+.insertProduct_wrap {min-height:500px}
+.insertProduct_wrap h3{text-indent:1em;color:#fe695a;border-bottom: 3px solid #fe695a}
+.insertProduct_wrap table{width:100%}
+.insertProduct_wrap th{width:200px;background-color:#FAFAFA; font-size: 17px; font-weight: bold}
+.insertProduct_wrap td{width:800px;padding:15px 0}
+.insertProduct_wrap input[type="text"]{width:600px; margin-left:20px}
+.insertProduct_wrap input[type="file"]{display:none}
+.insertProduct_wrap select{margin:0;margin-left:20px}
+.insertProduct_wrap input[type="number"]{margin:0;margin-left:20px}
+.insertProduct_wrap textarea{margin-left:20px;width:600px}
+.insertProduct_wrap .bootstrap-tagsinput{margin:0;margin-left:20px}
+.insertProduct_wrap p{margin-left:20px}
+
+.productTable tr:nth-child(7){background-color:#d9edf7;border-color:#bce8f1;}
+.productTable tr:nth-child(1){height:170px}
+.productTable tr:nth-child(1) td{position:relative;vertical-align:top}
+#insertProduct_category{width:100%;height:100px}
+#insertProduct_category > .allcategory > li > a {display:none}
+#insertProduct_category a:hover{text-decoration:none}
+#insertProduct_category>ul>li{width:100%}
+#insertProduct_category>ul>li>ul{float:left;width:95%;margin-left:20px}
+#insertProduct_category>ul>li>ul>li{float:left;width:10%;height:30px;line-height:30px;background-color:#eee;border-right:2px solid #D8D8D8;border-bottom:3px solid #D8D8D8;border-left:1px solid #fff;border-top:1px solid #fff;box-sizing:border-box;}
+#insertProduct_category>ul>li>ul>li>ul{display:none;position:absolute;width:95%;left:20px;top:70px}
+#insertProduct_category>ul>li>ul>li>ul>li{width:100px;height:30px;line-height:30px;background-color:#EFF8FB}
+#insertProduct_category>ul>li>ul>li>ul>li>a{color:#8f8f8f;text-decoration:none}
+#insertProduct_category>ul>li>ul>li>ul>li>a:hover{background-color:#eee;color:#f00}
+
+.connectionList label{margin-left:20px}
+.connectionList ul{float:left;margin:0; margin-left:20px}
+.connectionList li{float:left; margin-right:10px;height:15px;vertical-align:middle}
+
+.input-append{margin-top:10px}
+
+.productTable tr:last-child input[type="button"]{width:70px;height:30px;margin-right:5px;border:none;color:#fff;background-color:#c11e00;font-weight:bold;cursor: pointer;opacity:0.8;padding:0}
+.productTable tr:last-child input[type="button"]:hover{opacity:1}
+.productTable tr:last-child input[type="submit"]{width:70px;height:30px;border:none;color:#fff;background-color:#600f00;font-weight:bold;cursor: pointer;opacity:0.8;padding:0}
+.productTable tr:last-child input[type="submit"]:hover{opacity:1}
+
+

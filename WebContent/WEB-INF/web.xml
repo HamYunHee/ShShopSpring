@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>ShShop</display-name>
+
+	<servlet>
+		<servlet-name>DispatcherServlet</servlet-name>
+		<servlet-class>com.shshop.control.DispatcherServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DispatcherServlet</servlet-name>
+		<url-pattern>/action/*</url-pattern>
+	</servlet-mapping>
+
+	<resource-ref>
+		<description>DB Connection Pool </description>
+		<res-ref-name>jdbc/ShShopDB</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+
+	<filter>
+		<filter-name>LogFilter</filter-name>
+		<filter-class>com.shshop.filter.LogFilter</filter-class>
+		<init-param>
+			<param-name>test-param</param-name>
+			<param-value>Initialization Paramter</param-value>
+		</init-param>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>LogFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<listener>
+		<listener-class>com.shshop.listener.ShShopContextListener</listener-class>
+	</listener>
+	
+	<context-param> 
+    <description>Location to store uploaded file</description> 
+    <param-name>file-upload</param-name> 
+    <param-value>
+         /content/image/product_image/
+    </param-value> 
+	</context-param>
+	
+	<context-param> 
+    <description>Absolute location to store uploaded file</description> 
+    <param-name>file-upload-absolute</param-name> 
+    <param-value>
+         C:\mastProject\ShShop0601\WebContent\content\image\product_image
+    </param-value> 
+	</context-param>
+	 
+	<context-param> 
+    <description>File upload factory repository location to store uploaded file temporary</description> 
+    <param-name>file-upload-repository</param-name> 
+    <param-value>
+         C:/temp
+     </param-value> 
+	</context-param>
+
+
+	<welcome-file-list> 
+		<welcome-file>bootpage.html</welcome-file>
+	</welcome-file-list>
+</web-app>

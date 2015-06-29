@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
+  'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
+
+<mapper namespace='com.shshop.mapper.OrderMapper'>	
+
+	<insert id="insertOrderProc" parameterType='${OrderProcType}' statementType="CALLABLE">
+    {
+       call proc_insert_order(${id_user}, ${id_product}, ${id_address}, ${amount}, ${cost}, ${delivery_cost}, ${order_request}, #{insertedOrderId, mode=OUT, jdbcType=INTEGER})
+    }
+	</insert>
+	
+	<update id='updateOrder' parameterType='${OrderType}'>
+		UPDATE `or_order` 
+		SET `amount`= ${amount}, `cost` = ${cost}, delivery_cost = ${delivery_cost}, `order_request` = ${order_request} 
+		WHERE `id_order` = ${id_order};
+	</update>
+	
+	<select id='getOrder' resultMap='Order'>
+		SELECT * FROM `or_order` WHERE `id_user` = ${id_user}
+	</select>
+	
+	<select id='getOrderCount' resultType='int'>
+		SELECT COUNT(`id_order`) as count FROM `or_order` WHERE `id_user` = ${id_user}
+	</select>
+	
+	<select id='getBuyUserAdd' resultMap='${AddressResultMap}'>
+		SELECT a.* FROM `cr_address` a inner join `or_order` o on a.`id_address` = o.`id_address`
+		WHERE o.`id_order` = ${id_order}
+	</select>
+	
+	<select id='getSellOrder' resultMap='Order'>
+		SELECT * FROM `or_order` WHERE `id_product` in (SELECT `id_product` FROM `ps_product` WHERE `id_user` = ${id_user})
+	</select>
+	
+	<select id='getSellOrderCount' resultType='int'>
+		SELECT COUNT(`id_order`) as count FROM `or_order` WHERE `id_product` in (SELECT `id_product` FROM `ps_product` WHERE `id_user` = ${id_user});
+	</select>
+		
+	<delete id='deleteOrder'>
+		DELETE FROM `or_order` WHERE `id_order`=${id_order}
+	</delete>
+	
+	<resultMap id="Order" type="${OrderType}">
+		<id property='orderId' column='id_order' />
+		<result property='userId' column='id_user' />
+		<result property='productId' column='id_product' />
+		<result property='idAddress' column='id_address' />
+		<result property='amount' column='amount' />
+		<result property='cost' column='cost' />
+		<result property='deliveryCost' column='delivery_cost' />
+		<result property='orderRequest' column='order_request' />
+		<result property='dateCreated' column='date_created' />
+		<result property='dateUpdated' column='date_updated' /> 
+	</resultMap>
+</mapper>

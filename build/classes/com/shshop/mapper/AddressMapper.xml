@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
+  'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
+
+<mapper namespace='com.shshop.mapper.AddressMapper'>
+ 
+ 	<select id='getAddressCount' resultType='int'>
+		SELECT COUNT(`id_address`) as count FROM `cr_address`;
+	</select>
+	
+	<select id='getAddressById' resultMap='Address'>							
+		SELECT * FROM `cr_address` WHERE `id_address` = ${id_address};				
+	</select>
+	
+	<select id='getAllAddress' resultMap='Address'>							
+		SELECT * FROM `cr_address`;				
+	</select>
+	
+	<insert id='insertAddress' parameterType='${AddressType}' useGeneratedKeys='true' keyProperty='${id_address}'>
+		INSERT INTO `cr_address`(`id_user`, `id_parent_address`, `basic_add`, `detail_add`, `post_num_header`, `post_num_tail`, `name`, `phone_number`) 
+		VALUES (${id_user}, ${id_parent_address}, ${basic_add}, ${detail_add}, ${post_num_header}, ${post_num_tail}, ${name}, ${phone_number});
+	</insert>
+	
+	<insert id="insertAddressProc" parameterType='${AddressProcType}' statementType="CALLABLE">
+    {
+        call proc_insert_address(${id_user}, ${id_parent_address}, ${basic_add}, ${detail_add}, ${post_num_header}, ${post_num_tail}, ${name}, ${phone_number}, #{insertedAddressId, mode=OUT, jdbcType=INTEGER})
+    }
+	</insert>
+	
+	<update id='updateAddress' parameterType='${AddressType}'>
+		UPDATE `cr_address`
+		<set>
+			<if test="${id_parent_address} != null"> `id_parent_address`=${id_parent_address},</if>
+			<if test="${basic_add} != null"> `basic_add`=${basic_add}, </if>
+			<if test="${detail_add} != null"> `detail_add`=${detail_add}, </if>
+			<if test="${post_num_header} != null"> `post_num_header`=${post_num_header}, </if>
+			<if test="${post_num_tail} != null"> `post_num_tail`=${post_num_tail}, </if>
+			<if test="${name} != null"> `name`=${name}, </if>
+			<if test="${phone_number} != null"> `phone_number`=${phone_number}, </if> 
+		</set>
+		 WHERE `id_address`=${id_address};
+	</update>
+	
+	<delete id='deleteAddress'>
+		DELETE FROM `cr_address` WHERE `id_address`=${id_address};
+	</delete>
+	
+ 	<resultMap id='Address' type='${AddressType}'>
+		<id property='idAddress' column='id_address' />
+		<result property='parentIdAddress' column='id_parent_address' />
+		<result property='userId' column='id_user' />
+		<result property='basicAdd' column='basic_add' />
+		<result property='detailAdd' column='detail_add' />
+		<result property='postNumHeader' column='post_num_header' />
+		<result property='postNumTail' column='post_num_tail' />
+		<result property='name' column='name' />
+		<result property='phoneNumber' column='phone_number' />
+	</resultMap>
+</mapper>
